@@ -19,7 +19,8 @@ public class MainClassFromHomeworkLessonThree {
         //removeEvenNumbers();
         //getMinMaxAverFromList();
         //ex2();  // Доделать начатое на семинаре.
-        removeWholeNumbers();
+        //removeWholeNumbers();
+        removeWholeNumbersVarTwo();
 
     }
 
@@ -94,12 +95,25 @@ public class MainClassFromHomeworkLessonThree {
         for (String s : list) {
             try {
                 Integer.parseInt(s);
-            } catch (NumberFormatException nfe) {
+            } catch (NumberFormatException e) {
                 res.append(s).append(" ");
             }
         }
         System.out.println(res);
 
     }
+    private static void removeWholeNumbersVarTwo() {
+        List<String> list = new ArrayList<>(Arrays.asList("b", "15", "s", "w", "6", "0", "a"));
+        List<String> listWithoutNumbers = new ArrayList<>();
 
+        for (int i = 0; i < list.size(); i++) {
+            try {
+                Integer.parseInt(list.get(i));
+            } catch (NumberFormatException e) {
+                listWithoutNumbers.add(list.get(i));
+            }
+        }
+        System.out.println(listWithoutNumbers);
+
+    }
 }
