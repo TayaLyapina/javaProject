@@ -15,18 +15,20 @@ public class MainClassFromHomeworkLessonFour {
      */
 
     public static void main(String[] args) {
-        //consoleApplication();
+        consoleApplication();
         //reverseLinkedList();
-        consoleApplicationCatsVarTwo();
+        //consoleApplicationCatsVarTwo();
     }
 
     private static void reverseLinkedList() {
         LinkedList<String> wordsList = new LinkedList<>();
         Collections.addAll(wordsList, "apple", "orange", "banana", "tomato", "strawberry", "melon");
         System.out.println("LinkedList:" + wordsList);
+        LinkedList<String> wordsListReverse = new LinkedList<>();
         for (int i = wordsList.size()-1; i >= 0; i--) {
-            System.out.printf("%s%n", wordsList.get(i));
+            wordsListReverse.add(wordsList.get(i));
         }
+        System.out.println("LinkedListReverse:" + wordsListReverse);
     }
 
     private static void consoleApplication() {
